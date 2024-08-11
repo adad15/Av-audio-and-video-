@@ -11,7 +11,7 @@ std::string Unicode2Utf8(const std::wstring& strIn)
     ::WideCharToMultiByte(CP_UTF8, 0, strIn.c_str(), strIn.size(), (LPSTR)str.c_str(), length, NULL, NULL);
     return str;
 }
-
+ 
 int main()
 {
     int argc = 1;

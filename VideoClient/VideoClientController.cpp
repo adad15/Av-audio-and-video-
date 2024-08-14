@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "VideoClientController.h"
 
+/* 设置CVideoClientDlg中的VideoClientController*成员变量 */
 VideoClientController::VideoClientController()
 {
 	m_dlg.m_controller = this;
@@ -10,6 +11,7 @@ VideoClientController::~VideoClientController()
 {
 }
 
+/* 将对象里面的dlg的地址传递出来 */
 int VideoClientController::Init(CWnd*& pWnd)
 {
 	pWnd = &m_dlg;

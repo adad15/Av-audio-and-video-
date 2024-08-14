@@ -1,6 +1,13 @@
 #pragma once
 #include "EVlc.h"
 #include "VideoClientDlg.h"
+
+/*
+ *	控制层
+ *	逻辑很简单，在这里就相当于二道贩子，将命令转接到封装好的vlc库
+ * 
+ */
+
 enum EVlcCommand {
 	EVLC_PLAY,
 	EVLC_PAUSE,
@@ -29,4 +36,3 @@ protected:
 	EVlc m_vlc;
 	CVideoClientDlg m_dlg;
 };
-

@@ -1,6 +1,19 @@
 #pragma once
 #include <string>
 #include "vlc.h"
+
+/*
+ *	VlcSize类：封装了视频的宽和高
+ *		1.成员变量：nWidth、nHeight
+ *		2.成员函数：构造函数、赋值运算符重载
+ * 
+ * EVlc类：封装了vlc库的操作
+ *		1.成员变量：libvlc_instance_t（实例）、libvlc_media_t（媒体）、libvlc_media_player_t（播放器）、url地址、窗口句柄
+ *		2.成员函数：封装了vlc库的操作
+ * 
+ *
+ */
+
 class VlcSize {
 public:
 	int nWidth;
@@ -50,4 +63,3 @@ protected:
 	HWND m_hwnd;
 #endif
 };
-

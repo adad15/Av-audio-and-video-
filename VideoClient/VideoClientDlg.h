@@ -1,11 +1,12 @@
-﻿
-// VideoClientDlg.h: 头文件
-//
+﻿#pragma once
+class VideoClientController;  // 要声明一下，下面的类会用到VideoClientController，不能引用它的头文件，会形成循环引用
 
-#pragma once
-class VideoClientController;
+/*
+ *	ui控件交互
+ *	封装了VideoClientController对象，用来调用里面的方法
+ * 
+ */
 
-// CVideoClientDlg 对话框
 class CVideoClientDlg : public CDialogEx
 {
 // 构造
@@ -20,11 +21,10 @@ public:
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV 支持
 
-
 // 实现
 protected:
 	HICON m_hIcon;
-	bool m_status;
+	bool m_status;  // 标记是否在进行播放
 
 	// 生成的消息映射函数
 	virtual BOOL OnInitDialog();
@@ -47,7 +47,7 @@ protected:
 	CSliderCtrl m_pos;
 	CSliderCtrl m_volume;
 	CEdit m_url;
-	float m_length;
+	float m_length;  // 视频长度
 public:
 	VideoClientController* m_controller;
 };
